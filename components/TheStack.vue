@@ -54,7 +54,7 @@
       img="/img/morningscore.svg"
       link="https://morningscore.io?fpr=bjarke">
       <p>
-        SEO is important, and can sometimes be a hassle.
+        SEO is important, but can sometimes be a bit confusing.
         <br />
         Morningscore makes the whole process easier and WHOLE lot more fun, with
         their gamified platform. I still have much to learn with SEO, and look
