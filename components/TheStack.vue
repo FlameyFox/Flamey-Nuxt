@@ -52,7 +52,7 @@
     <stack-item
       title="Morningscore.io"
       img="/img/morningscore.svg"
-      link="https://morningscore.io?fpr=bjarke47">
+      link="https://morningscore.io?fpr=bjarke">
       <p>
         SEO is important, and can sometimes be a hassle.
         <br />
