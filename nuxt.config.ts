@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   app: {
     head: {
       meta: [
@@ -36,5 +37,18 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: "page", mode: "out-in" },
   },
+
   plugins: [{ src: "~/plugins/vercel.js", mode: "client" }],
+  modules: ["@nuxt/content", "@nuxtjs/sitemap"],
+  sitemap: {
+    hostname: "https://flameyfox.com", // Replace with your actual site URL
+
+    // Dynamically fetch blog routes
+    routes: async () => {
+      const posts = await queryContent("/blog").find();
+      return posts.map((post) => post._path);
+    },
+  },
+  css: ["~/assets/css/blog.css"],
+  compatibilityDate: "2024-12-15",
 });

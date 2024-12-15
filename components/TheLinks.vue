@@ -13,23 +13,32 @@
         <h3>My Tech Stack</h3>
         <hr />
         <p>
-          If you are curious what tools i use, i have listed some of my favorite
-          here.
+          If you are curious what tools I use, I have listed some of my
+          favorites here.
         </p>
       </div>
       <nuxt-link class="btn" to="/stack">Ooh, let me see!</nuxt-link>
+    </div>
+    <div class="link blog">
+      <div class="info">
+        <h3>My Blog</h3>
+        <hr />
+        <p>Read my thoughts on tech, development, the tools I use and more.</p>
+      </div>
+      <nuxt-link class="btn" to="/blog">Take me to the blog!</nuxt-link>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .links {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Only 2 items per row */
   gap: 2rem;
   margin-top: 1.5rem;
 
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    grid-template-columns: 1fr; /* Stack items in a single column on smaller screens */
     gap: 1.5rem;
   }
 
@@ -37,7 +46,6 @@
     padding: 1.5rem;
     border-radius: 22px;
     background: #fff;
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,10 +55,10 @@
       font-size: 2rem;
       color: #222;
     }
-    h4 {
-      font-weight: 400;
-      font-size: 1.2rem;
-      color: #222;
+
+    p {
+      font-size: 1rem;
+      color: #555;
     }
 
     hr {
