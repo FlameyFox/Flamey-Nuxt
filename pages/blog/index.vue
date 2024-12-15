@@ -3,7 +3,7 @@
     <div class="center">
       <nuxt-link class="goback" to="/">Go back</nuxt-link>
       <h1>Blog</h1>
-      <div v-for="post in posts" :key="post._path">
+      <div class="post-card" v-for="post in posts" :key="post._path">
         <NuxtLink :to="post._path">
           <h2>{{ post.title }}</h2>
         </NuxtLink>
@@ -56,7 +56,7 @@ const { data: posts } = await useAsyncData(() =>
     }
     h2 {
       font-weight: 600;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
     }
     h3 {
       font-weight: 400;
@@ -64,7 +64,12 @@ const { data: posts } = await useAsyncData(() =>
     }
     p {
       font-weight: 200;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      max-width: 600px;
+    }
+
+    .post-card {
+      margin-bottom: 2rem;
     }
   }
 }
