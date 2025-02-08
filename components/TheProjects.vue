@@ -2,7 +2,7 @@
   <section class="projects">
     <div class="project yippr">
       <div class="info">
-        <h3>Njord.so</h3>
+        <h3>Njordfinance</h3>
         <h4>Planning...</h4>
         <hr />
         <p>
